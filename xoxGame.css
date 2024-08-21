@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background:linear-gradient(rgb(160, 29, 160),rgb(160, 10, 135));
+}
+
+.box{
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
+    margin: 10px;
+    /* border: 1px solid orangered; */
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    box-shadow: rgba(56, 56, 56, 0.5) 2px 2px 15px;
+}
+.box:nth-child(odd){
+    color: yellowgreen;
+}
+.box:nth-child(even){
+    color: lightsalmon;
+}
+.boxes{
+    display: flex;
+}
+.wins{
+    text-align: center;
+}
+.scoreBoard{
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 10px;
+    p{
+        font-size: 14px;
+        
+        span{
+            font-weight: bold;
+        }
+    }
+    h3{
+        font-size: 12px;
+        /* text-transform: lowercase; */
+        span{
+            color: violet;
+            font-size: 18px;
+            padding-right: 5px;
+            font-weight: bold;
+        }
+    }
+
+}
+.wins{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0px;
+}
+.tryAgain{
+    padding: 5px;
+    background-color: white;
+    width:25%;
+    border-radius: 20px;
+    color: red;
+    text-shadow: 1px 2px 2px rgb(108, 109, 108);
+    font-size: 14px;
+    /* position: absolute; */
+    animation-name: animate2;
+    
+    animation: animate2 1s ease-in-out;
+}
+@keyframes animate2{
+    from{
+        transform: scale(0.2);
+
+    }
+    to{
+        transform: scale(0.8);
+    }
+}
+
+.color{
+    background-color: red;
+    animation-name: color;
+    /* border-radius: 30%; */
+    animation-timing-function: linear;
+    animation-duration: 2s;
+    /* animation-delay: 1s; */
+}
+@keyframes color{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg) scale(1);
+    }
+}
+
+
+#resetBtn{
+    border: none;
+    background-color: blue;
+    padding: 8px 20px;
+    color:white;
+    width: 30px;
+    font-size: 12px;
+    text-align: center;
+    border-radius: 8px;
+    display: none;
+}
